@@ -1,25 +1,53 @@
-# club system
-a = int(650)
-b = int(650)
+# program should take two input values
+def compare_numbers(a,b):
+    if type(a) == int and type(b) == int:
+        if a == b:
+            return "a and b are equal"
+        elif a > b:
+            return "a is greater than b"
+        else:
+            return "b is greater than a"
+    else:
+        return "invalid input"
 
-if int(a) == int(b):
-    print('numbers are equal')
-
-if int(b) > int(a):
-    print('b is greater than a ')
-
-if int(a) > int(b):
-    print('a is greater than b')
-
-
-# prog
-
-def answer(num1, num2):
-    answer = (int(num1) + int(num2))
-    print(int(answer))
-    if num1 == num2:
-        print('numbers are equal ')
-    return
+a = int(input(" Enter number a : "))
+b = int(input(" Enter number b : "))
+print(compare_numbers(a,b))
 
 
-answer(8,5 )
+#  2
+def calculator(c,d):
+    if type(c) == int and type(d) == int:
+      sum = c + d
+      difference = c - d
+      product = c * d
+      # division
+      if d == 0:
+          return "division by zero not allowed"
+      else:
+          division = c / d
+          if c == d:
+              return "a and b are equal\nsum: {}\ndifference: {}\nproduct: {}\ndivision: {}".format(sum, difference, product, division)
+          else:
+              return "sum: {}\ndifference: {}\nproduct: {}\ndivision: {}".format(sum, difference, product, division)
+
+    else:
+        return "invalid input"
+
+
+c = int(input(" Enter number c : "))
+d = int(input(" Enter number d : "))
+print(calculator(c,d))
+
+
+
+
+
+
+
+
+
+
+#https://www.w3schools.com/python/python_lists_sort.asp : Sorting a list
+#https://www.w3schools.com/python/python_lists_copy.asp
+
